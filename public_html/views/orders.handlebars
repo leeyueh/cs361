@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="utf=8">
+    <link rel="stylesheet" href="styles.css">
+    <title>EZ games</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <th><a href="/">Home</a></th>
+            <th><a href="customers">Customers</a></th>
+            <th><a href="orders">Orders</a></th>
+            <th><a href="items">Order Items</a></th>
+            <th><a href="sellers">Sellers</a></th>
+        </ul>
+    </nav>
+    <h1>EZ games orders</h1>
+    <table>
+        <tr>
+            <th>Customer ID</th>
+            <th>Order ID</th>
+            <th>Order date</th>
+            <td>Order status</td>
+            <th>          </th>
+            <th>Shipped date</th>
+            <th>Seller id</th>
+        </tr>
+        {{#each orders}}
+        <tr>
+            <td>{{customer_id}}</td>
+            <td>{{order_id}}</td>
+            <td>{{date}}</td>
+            <td>{{order_status}}</td>
+	    <td>{{cfname}} {{clname}}</td>
+            <td>{{shippdate}}</td>
+            <td>{{SellerFirstName}}</td>
+	    <form  id="deleteCustomer" action="/deleteCustomer/{{customer_id}}" method="post">
+            <td><button type="submit">Delete</button></td>       
+            </form>
+        </tr>
+        {{/each}}
+    </table>
+    <h3>Create Order:</h3>
+    <form id="addorder" action="/orders" method="post">
+        <fieldset>
+            <label for="customer_id">Customer ID</label>
+            <br />
+            <select id="customer_id" name="customer_id">
+            <option>Choose customer ID</option>
+            {{#each customers}}
+            <option>{{customer_id}}</option>
+            {{/each}}
+            </select>
+            <br />
+            <label for="order_date">Order date</label>
+            <br />
+            <input type="date" name="order_date" id="order_date" maxlength="40">
+            <br />
+            <label for="shipped_date">Shipped date</label>
+            <br />
+            <input type="date" name="shipped_date" id="shipped_date" maxlength="15" required>
+            <br />
+ 	    <label for="order_status">Order's status</label>
+            <br />
+            <input type="text" name="order_status" id="order_status" maxlength="15" required>
+            <br />
+            <label for="seller_id">Seller's ID</label>
+            <br />
+            <select name="seller_id" id="seller_id" value="null">  
+            <option>select sellers</option>     
+            {{#each sellers}}
+            <option>{{seller_id}}</option>
+            {{/each}}
+            </select>
+
+        </fieldset>
+        <br />
+        <button type="submit">Create order</button>
+    </form>
+
+
+
+
+
+
+
+
+</body>
+</html>

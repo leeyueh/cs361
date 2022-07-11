@@ -1,0 +1,91 @@
+<html>
+<head>
+    <meta charset="utf=8">
+    <link rel="stylesheet" href="styles.css">
+    <title>EZ games</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <th><a href="/">Home</a></th>
+            <th><a href="customers">Customers</a></th>
+            <th><a href="orders">Orders</a></th>
+            <th><a href="items">Order Items</a></th>
+            <th><a href="sellers">Sellers</a></th>
+        </ul>
+    </nav>
+    <h1>EZ games sellers</h1>
+    <table>
+        <tr>
+            <th>Seller ID </th>
+            <th>Seller's name</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip code</th>
+        </tr>
+        {{#each sellers}}
+        <tr>
+            <td>{{seller_id}}</td>
+            <td>{{seller_name}}</td>
+            <td>{{phone}}</td>
+            <td>{{email}}</td>
+            <td>{{street}}</td>
+            <td>{{city}}</td>
+            <td>{{state}}</td>
+            <td>{{zip_code}}</td>
+	    <form  id="deleteSeller" action="/deleteSeller/{{seller_id}}" method="post">
+            <td><button type="submit">Delete</button></td>       
+            </form>
+        </tr>
+        {{/each}}
+    </table>
+    <h3>Add Seller:</h3>
+    <form id="addseller" action="/sellers" method="post">
+        <fieldset>
+            <label for="seller_name">Seller's first name</label>
+            <br />
+            <input type="text" name="seller_name" id="seller_name" maxlength="15" required>
+            <br />
+            <label for="phone">Phone number</label>
+            <br />
+            <input type="phone" name="phone" id="phone" maxlength="40">
+            <br />
+            <label for="email">Email</label>
+            <br />
+            <input type="text" name="email" id="email" maxlength="15" required>
+            <br />
+            <label for="street">Street</label>
+            <br />
+            <input type="street" name="street" id="street" maxlength="15" required>
+            <br />
+            <label for="city">City</label>
+            <br />
+            <input type="city" name="city" id="city" maxlength="15" required>
+            <br />
+            <label for="state">State</label>
+            <br />
+            <input type="state" name="state" id="state" maxlength="15" required>
+            <br />
+            <label for="zip_code">Zip code</label>
+            <br />
+            <input type="zip_code" name="zip_code" id="zip_code" maxlength="15" required>
+            <br />
+
+
+        </fieldset>
+        <br />
+        <button type="submit">Add Seller</button>
+    </form>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)file://stak.engr.oregonstate.edu/users/leeyueh/public_html/customers.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+    <link href="file:///C:/Users/tombo/Desktop/Codes/CS340/htmlTemplateSandbox/styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="links">
+            <a href='Currency'><button>Currency</button></a>
+            <a href='Coordinates'><button>Coordinates</button></a>
+        </div>
+        <script src="./scripts/changeURL.js"></script>
+    </nav>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        
+        th, td {
+          padding: 10px;
+        }
+    </style>
+
+    <br>
+    <table>
+    <tbody>
+        <tr>
+            <th>No.</th>
+            <th>City Name/th>
+            <th>State/Country</th>
+            <th>Temperature</th>
+            <th>Precipitation</th>
+            <th>Wind</th>
+            <th>(Remove?)</th> 
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>Oakland</th>
+            <th>California</th>
+            <th>71</th>
+            <th>0%</th>
+            <th>13 mph</th>
+            <th><input type="submit" value="Delete"></th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>Orlando</th>
+            <th>Florida</th>
+            <th>87</th>
+            <th>68%</th>
+            <th>9 mph</th>
+            <th><input type="submit" value="Delete"></th>
+        </tr>
+    </tbody>
+    </table>
+    <br>
+    
+    <div class="center">
+        <h2>Search for the weather info of a city </h2>
+    </div>
+    <div class="center">
+        <p>This page allows you to search, view, weather information</p>
+    </div>
+    
+    <form action="file:///C:/Users/tombo/Desktop/Codes/CS340/htmlTemplateSandbox/index.html" method="post">
+        <fieldset>
+            <legend><em>Search for weather</em></legend>
+            <fieldset>
+                <label for="city_name">City Name</label>
+                <br>
+                <input type="text" name="city_name" id="city_name" maxlength="20" required="">
+                <br>
+                <label for="state_country_name">Sate or Country Name (optional)</label>
+                <br>
+                <input type="text" name="state_name" id="state_name" maxlength="10" required="">
+                <br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Search">
+        </fieldset>
+ 
+    <br>
+
+    
+
+</em></form></body></html>
