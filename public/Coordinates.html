@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)file:///C:/Users/tombo/Desktop/Codes/CS340/Group%20Project/Sellers.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coordinates</title>
+    <link href="file:///C:/Users/tombo/Desktop/Codes/CS340/htmlTemplateSandbox/styles/style.css" rel="stylesheet">
+</head>
+
+<style>
+    body {background-color: rgb(221, 196, 82);font-family: courier;font-size:larger;font-weight: 900;}
+    h2   {color: red;}
+    p    {color: darkred;}
+</style>
+
+<body>
+    <nav>
+        <div class="links">
+        <a href='index.html'><button title="Go to home page">Home</button></a>
+        <a href='Weather'><button title="Click here to search for weather info">Weather</button></a>
+	    <a href='Currency'><button title="Click here to search for currency exchange rate">Currency</button></a>
+        </div>
+        <script src="scripts/changeURL.js"></script>
+    </nav>
+    <h style="font-size: 300%";>&#8593</h><h>(Click one of the above to start a new search your desired info...)</h>
+    <br>    
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        
+        th, td {
+          padding: 10px;
+        }
+    </style>
+
+    <br>
+    <table>
+        <tbody>
+        <tr>
+            <th>No.</th>
+            <th>City Name</th>
+            <th>Coordinates</th>
+            <th>(removed?)</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>Oakland</th>
+            <th>37.8044° N, 122.2712° W</th>
+            <th><input type="submit" value="Delete"></th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>Orlando</th>
+            <th>28.5384° N, 81.3789° W</th>
+            <th><input type="submit" value="Delete"></th>
+        </tr>
+    </tbody>
+    </table>
+    <br>
+    <img src="Coordinates.png" alt="Coordinates" width="200" height="160">
+    <div class="center">
+        <h2>Geo-location Magic Box</h2>
+    </div>
+    <div class="center">
+        <p>This page allows you to search, view, add, or update seller information</p>
+    </div>
+ 
+    <form action="file:///C:/Users/tombo/Desktop/Codes/CS340/htmlTemplateSandbox/index.html" method="post">
+        <fieldset>
+            <legend><em>Search for the coordinates</em></legend>
+            <fieldset>
+                <label for="city_name">City Name</label>
+                <br>
+                <input type="text" name="city_name" id="city_name" maxlength="20" required="">
+                <br>
+                <label for="state_country_name">Sate or Country Name (optonal)</label>
+                <br>
+                <input type="text" name="state_name" id="state_name" maxlength="10" required="">
+                <br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Search">
+        </fieldset>
+    </form>
+</em></form></body></html>

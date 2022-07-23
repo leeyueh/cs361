@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0070)file:///C:/Users/tombo/Desktop/Codes/CS340/Group%20Project/Orders.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Currency</title>
+    <link href="file:///C:/Users/tombo/Desktop/Codes/CS340/htmlTemplateSandbox/styles/style.css" rel="stylesheet">
+</head>
+
+<style>
+    body {background-color: rgb(122, 204, 102);font-family: courier;font-size:larger;font-weight: 900;}
+    h2   {color: red;}
+    p    {color: darkred;}
+</style>
+
+<body>
+    <nav>
+        <div class="links">
+            <a href='index.html'><button title="Go to home page">Home</button></a>
+            <a href='Weather'><button title="Click here to search for weather info">Weather</button></a>
+            <a href='Coordinates'><button title="Click here to search for the geographical location in coordinates">Coordinates</button></a>
+        </div>
+        <script src="scripts/changeURL.js"></script>
+    </nav>
+    <h style="font-size: 300%";>&#8593</h><h>(Click one of the above to start a new search your desired info...)</h>
+    <br>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        
+        th, td {
+          padding: 10px;
+        }
+    </style>
+
+    <br>
+    <table>
+        <tbody>
+        <tr>
+            <th>No.</th>
+            <th>Country Name</th>
+            <th>Currency Name</th>
+            <th>in USD</th>
+            <th>(removed?)</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>Japan</th>
+            <th>Yen</th>
+            <th>0.0073</th>
+            <th><input type="submit" value="Delete"></th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>British</th>
+            <th>Pound</th>
+            <th>1.19</th>
+            <th><input type="submit" value="Delete"></th>
+        </tr>
+    </tbody>
+    </table>
+    <br>
+    <img src="Currency.png" alt="Currency" width="200" height="160">
+    <div class="center">
+        <h2>Currency finder</h2>
+    </div>
+    <div class="center">
+        <p>This page allows you to search, view, currency information</p>
+    </div>
+  
+    <form action="file:///C:/Users/tombo/Desktop/Codes/CS340/htmlTemplateSandbox/index.html" method="post">
+        <fieldset>
+            <legend><em>Search for a currency</em></legend>
+            <fieldset>
+                <label for="Country">Country Name</label>
+                <br>
+                <input type="text" name="country" id="country" maxlength="20" required="">
+                <br>
+                <label for="Currency">Currency</label>
+                <br>
+                <input type="text" name="currency" maxlength="10" required="">
+                <br>
+            </fieldset>
+            <br>
+            <input type="submit" value="Search">
+        </fieldset>
+    </form>
+  
+
+</em></form></body></html>
